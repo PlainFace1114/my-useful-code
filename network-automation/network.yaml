@@ -1,0 +1,54 @@
+devices:
+    2960x-sw:
+        type: 'switch'
+        os: 'ios'
+        platform: C2960X
+        alias: 'switch1'
+        credentials:
+            default:
+                username: 
+                password: 
+        connections:
+            cli:
+                protocol: telnet
+                ip: "192.168.0.1"
+
+#AIR-AP2802I-A-K9
+    c9300-sw:
+        type: 'switch'
+        os: 'iosxe'
+        platform: C9300
+        alias: 'switch2'
+        credentials:
+            default:
+                username: 
+                password: 
+            enable:
+                password: 
+        connections:
+            cli:
+                protocol: ssh
+                ip: "192.168.0.2"
+topology:
+    2960x-home:
+        interfaces:
+            Vlan10:
+                ipv4: 
+                type: enet
+            Vlan20:
+                ipv4: 
+                type: enet
+            Vlan30:
+                ipv4: 
+                type: enet
+    c9300-home:
+        interfaces:
+            Vlan10:
+                ipv4: 
+                type: enet
+            Vlan20:
+                ipv4: 
+                type: enet
+            Vlan30:
+                ipv4: 
+                type: enet
